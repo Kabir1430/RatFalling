@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
-    public GameObject objectToSpawn;
-    public float spawnInterval = 5f;
+
+    [Header("Position of spawn")]
+
+    [SerializeField] public Transform SpawnPos;
+    [SerializeField]
+    public Vector3 nextSpawnPoint;
+
+
+  [Header("Object")]
+
+    [SerializeField] public GameObject objectToSpawn;
+
+    [Header("Spawn Speed")]
+    [SerializeField] public float spawnInterval = 5f;
 
     void Start()
     {
@@ -17,7 +29,9 @@ public class PipeSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
-            Instantiate(objectToSpawn, transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(objectToSpawn, nextSpawnPoint, Quaternion.identity);
+            nextSpawnPoint = temp.transform.GetChild(1).transform.position;
+
         }
     }
 }

@@ -15,6 +15,6 @@ public class pipe : MonoBehaviour
 
         transform.position = currentPosition;
 
-        Destroy(this.gameObject , 3f);
+    
     }
 }

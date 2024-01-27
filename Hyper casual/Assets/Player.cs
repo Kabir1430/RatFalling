@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     {
         float horizontalInput = joystick.Horizontal;
 
-        float verticalInput = joystick.Vertical;
+        float verticalInput = joystick.Vertical ;
 
         Vector3 inputDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
         Vector3 velocity = inputDirection * speed;
