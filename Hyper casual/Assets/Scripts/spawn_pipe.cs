@@ -11,7 +11,7 @@ public class spawn_pipe : MonoBehaviour
     
     void Start()
     {
-        Transform[] children = parentObject.GetComponentsInChildren<Transform>();
+      /*  Transform[] children = parentObject.GetComponentsInChildren<Transform>();
 
         foreach (Transform child in children)
         {
@@ -19,8 +19,9 @@ public class spawn_pipe : MonoBehaviour
             {
                 child.parent = null;
             }
-        }
+        }*/
     }
+      
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "pipe")
@@ -34,6 +35,8 @@ public class spawn_pipe : MonoBehaviour
         if(other.gameObject.tag == "pipe")
         {
            Destroy(parentObject);
+
+            Debug.Log(other);
         }
     }
 }
