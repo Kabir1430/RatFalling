@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
 
 
     [Header("Movement")]
-    public float speed = 5f;
-    public Rigidbody rb;
+    [SerializeField] public float speed = 5f;
+    [SerializeField] public Rigidbody rb;
 
 
     [Header("Joystick")]
