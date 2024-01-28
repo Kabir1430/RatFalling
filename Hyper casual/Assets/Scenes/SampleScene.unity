@@ -2411,6 +2411,11 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 2065348570}
+    - target: {fileID: 362498821965403288, guid: 36757e245e0b7844cb85fa561dd70067,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 1433045688520451199, guid: 36757e245e0b7844cb85fa561dd70067,
         type: 3}
       propertyPath: m_Name
