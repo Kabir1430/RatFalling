@@ -7,7 +7,7 @@ public class PipeSpawner : MonoBehaviour
 
     [Header("Position of spawn")]
 
-    [SerializeField] public Transform SpawnPos;
+  //  [SerializeField] public Transform SpawnPos;
     [SerializeField]
     public Vector3 nextSpawnPoint;
 
