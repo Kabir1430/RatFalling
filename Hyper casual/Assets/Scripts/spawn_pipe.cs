@@ -7,6 +7,20 @@ public class spawn_pipe : MonoBehaviour
 
     public GameObject Pipeprefab;
 
+    public GameObject parentObject;
+    
+    void Start()
+    {
+        Transform[] children = parentObject.GetComponentsInChildren<Transform>();
+
+        foreach (Transform child in children)
+        {
+            if (child != parentObject.transform)
+            {
+                child.parent = null;
+            }
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "pipe")
@@ -19,7 +33,7 @@ public class spawn_pipe : MonoBehaviour
     {
         if(other.gameObject.tag == "pipe")
         {
-           Destroy(other.gameObject);
+           Destroy(parentObject);
         }
     }
 }
