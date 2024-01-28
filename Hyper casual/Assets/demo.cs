@@ -5,20 +5,19 @@ using UnityEngine;
 public class demo : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] GameObject groundTile;
-    Vector3 nextSpawnPoint;
-    public void SpawnTile()
+    public Transform target;  // The target to follow (e.g., player)
+    public float smoothSpeed = 0.125f;  // Adjust this to control the smoothness
+
+    void LateUpdate()
     {
-        GameObject temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-        nextSpawnPoint = temp.transform.GetChild(1).transform.position;
+        if (target != null)
+        {
+            Vector3 desiredPosition = target.position;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
 
+            // Optionally, you can make the camera look at the target
+            transform.LookAt(target);
+        }          
     }
-    // Update is called once per frame
-
-    private void Start()
-    {
-        SpawnTile();
-        SpawnTile(); SpawnTile(); SpawnTile(); SpawnTile(); SpawnTile();
-    }
-
 }
