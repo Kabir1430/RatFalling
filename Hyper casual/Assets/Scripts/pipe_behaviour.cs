@@ -21,10 +21,7 @@ public class pipe_behaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Detect")
         {
-            Destroy(gameObject,2);
-
-            
-            Debug.Log(other);
+          Destroy(this.gameObject, 2f);
         }
     }
 }
