@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,22 +6,33 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] public GameObject player;        //Public variable to store a reference to the player game object
+    public Transform target;
+    public float smoothSpeed = 0.125f;
+    public Vector3 offset = new Vector3(0f, 2f, -5f);
+    public float rotationSpeed = 5f;
 
-    [SerializeField] public Vector3 offset;            //Private variable to store the offset distance between the player and camera
+    private Vector3 velocity = Vector3.zero;
+    private float rotationVelocity = 0f;
 
-    // Use this for initialization
-    void Start()
+    void LateUpdate()
     {
-        //Calculate and store the offset value by getting the distance between the player's position and camera's position.
-        offset = transform.position - player.transform.position;
-    }
+        if (target != null)
+        {
+            // Calculate the desired position by adding the offset to the target's position
+            Vector3 desiredPosition = target.position + offset;
 
-    // LateUpdate is called after Update each frame
-    void LateUpdate()            
-    {
-        // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        transform.position = player.transform.position + offset;
-    }
+            // Smoothly interpolate between the current and desired positions
+            transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothSpeed);
 
+            // Set the desired rotation angles
+            float desiredRotationX = 90f;  // Fixed X rotation
+            float desiredRotationY = target.eulerAngles.y;
+
+            // Smoothly interpolate between the current and desired rotation angles
+            float smoothedRotationY = Mathf.SmoothDampAngle(transform.eulerAngles.y, desiredRotationY, ref rotationVelocity, rotationSpeed);
+
+            // Update the camera's rotation
+            transform.rotation = Quaternion.Euler(desiredRotationX, smoothedRotationY, 0f);
+        }
+    }
 }
