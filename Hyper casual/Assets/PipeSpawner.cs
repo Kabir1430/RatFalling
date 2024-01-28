@@ -31,6 +31,7 @@ public class PipeSpawner : MonoBehaviour
             yield return new WaitForSeconds(spawnInterval);
             GameObject temp = Instantiate(objectToSpawn, nextSpawnPoint, Quaternion.identity);
             nextSpawnPoint = temp.transform.GetChild(1).transform.position;
+            
 
         }
     }
