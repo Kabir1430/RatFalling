@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -321,6 +321,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4660642439378649715}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1325839790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1033755161421995099, guid: cc0f756bcc258aa4081b1a30776d231b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4660642439378649715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1557674879
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,8 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPos: {fileID: 0}
   nextSpawnPoint: {x: 0, y: 0, z: 0}
-  objectToSpawn: {fileID: 1033755161421995099, guid: cc0f756bcc258aa4081b1a30776d231b,
-    type: 3}
+  objectToSpawn: {fileID: 1325839790}
   spawnInterval: 2
 --- !u!1001 &1989451536
 PrefabInstance:
@@ -884,6 +889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677974046105034900, guid: cc0f756bcc258aa4081b1a30776d231b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -175
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
