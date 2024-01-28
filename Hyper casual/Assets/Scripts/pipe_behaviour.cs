@@ -17,11 +17,4 @@ public class pipe_behaviour : MonoBehaviour
         // Apply the new position to the object
         transform.position = currentPosition;
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Detect")
-        {
-          Destroy(this.gameObject, 2f);
-        }
-    }
 }
