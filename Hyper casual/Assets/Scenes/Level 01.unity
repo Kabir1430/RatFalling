@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -814,7 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfe2bbe98143e44fb386fc30ff14a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 2
   rb: {fileID: 362498821938071128}
   joystick: {fileID: 784327307}
 --- !u!4 &254711461256106974
@@ -1058,7 +1058,7 @@ Transform:
   m_GameObject: {fileID: 9047058907748435817}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -22.36, y: 14.623, z: 0}
+  m_LocalPosition: {x: 0, y: 22.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1073,9 +1073,9 @@ Transform:
   m_GameObject: {fileID: 1433045688476350143}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.09, y: 19.2, z: -0.1}
+  m_LocalScale: {x: 0.48, y: 0.48, z: 0.48}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 254711461256106974}
   - {fileID: 1503916206}
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 8229527449509276178}
   smoothSpeed: 1
-  offset: {x: 0, y: 6, z: 0}
+  offset: {x: 0, y: 4.8, z: 0}
   rotationSpeed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

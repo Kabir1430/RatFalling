@@ -9,6 +9,9 @@ public class pipe_destroy : MonoBehaviour
       if(other.gameObject.tag == "pipedelete")
       {
         Destroy(other.gameObject);
-      }
+            Debug.Log("Destroy");
+        }
+
+
     }
 }
