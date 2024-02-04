@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3788942925622649069}
+  - component: {fileID: 3078488409546321973}
   m_Layer: 0
   m_Name: O
-  m_TagString: Untagged
+  m_TagString: pipedelete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,6 +34,19 @@ Transform:
   - {fileID: 636639666654054048}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3078488409546321973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092144765615587526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b1d8d786353e24f8d2a03764ce1da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 16
 --- !u!1 &8117079829565151607
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +160,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613203021538780054, guid: cc0f756bcc258aa4081b1a30776d231b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.27111465
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613203021538780054, guid: cc0f756bcc258aa4081b1a30776d231b,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0063707056
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
