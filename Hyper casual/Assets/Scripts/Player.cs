@@ -5,15 +5,22 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Header("Script")]
 
+    public Spawn Spawn;
 
     [Header("Movement")]
     [SerializeField] public float speed = 5f;
     [SerializeField] public Rigidbody rb;
 
+        [Header("Joystick")]
+    public DynamicJoystick joystick;
 
-    [Header("Joystick")]
-    public DynamicJoystick joystick;  
+
+    [Header("Spawn")]
+    public bool Spawned;
+    [SerializeField] GameObject groundTile;
+    Vector3 nextSpawnPoint;
 
     void Start()
     {
@@ -47,10 +54,34 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="Player")
+      
+        if(other.tag=="Detect")
         {
-            Debug.Log("Spawn");
+
+
+            if(Spawned)
+            {
+
+           SpawnTile();
+                Spawned = false;
+            }
+
+
+
         }
     }
+  
 
+
+    
+
+
+    // Start is called before the first frame update
+
+    public void SpawnTile()
+    {
+        GameObject temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        nextSpawnPoint = temp.transform.GetChild(1).transform.position;
+
+    }
 }
