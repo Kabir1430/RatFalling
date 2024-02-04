@@ -16,4 +16,6 @@ public class spawn_pipe : MonoBehaviour
           // Debug.Log("spawn");
         }
     }
+
+  //  sin(L(0,2*pi))*6
 }
