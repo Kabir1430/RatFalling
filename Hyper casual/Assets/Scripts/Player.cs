@@ -43,5 +43,14 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector3(smoothVelocity.x, rb.velocity.y, smoothVelocity.z);
     }
 
-   
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag=="Player")
+        {
+            Debug.Log("Spawn");
+        }
+    }
+
 }
