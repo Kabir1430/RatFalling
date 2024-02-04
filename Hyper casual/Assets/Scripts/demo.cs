@@ -18,7 +18,7 @@ public class demo : MonoBehaviour
     private void Start()
     {
         SpawnTile();
-        SpawnTile(); SpawnTile(); SpawnTile(); SpawnTile(); SpawnTile();
+        SpawnTile(); 
     }
 
 }
