@@ -6,23 +6,16 @@ public class spawn_pipe : MonoBehaviour
 {
 
     public GameObject Pipeprefab;
-    Vector3 nextspawnpos;
-
-    void Spawnpipe()
-    {
-            GameObject temp = Instantiate(Pipeprefab,nextspawnpos, Quaternion.identity);
-            nextspawnpos = temp.transform.GetChild(1).transform.position;
-           //Time.timeScale = 0f;
-          // Debug.Log("spawn");
-    }
-    void OnTriggerExit(Collider other)
+      
+    private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "pipe")
         {
-         Spawnpipe();
-         //Time.timeScale = 0f;
-         //Destroy(other, 10f);
+            Instantiate(Pipeprefab, new Vector3(0,-111,0), Quaternion.identity);
+           //Time.timeScale = 0f;
+          // Debug.Log("spawn");
         }
     }
 
+  //  sin(L(0,2*pi))*6
 }
